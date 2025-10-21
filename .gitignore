@@ -1,20 +1,60 @@
-# PhpStorm IDE project directory
-.idea
+# ----------------------------------------------------------------
+# Project Dependencies
+# ----------------------------------------------------------------
+# Dependencies managed by npm/yarn
+node_modules/
 
-# Node.js modules
-node_modules
+# ----------------------------------------------------------------
+# Build Output / Compiled Files
+# ----------------------------------------------------------------
+# Common output directories for Gulp, Webpack, etc.
+build/
+dist/
+
+# Temporary directory often used by Gulp or Sass
+.tmp/
+
+# ----------------------------------------------------------------
+# Project Caches, Logs & Config
+# ----------------------------------------------------------------
+# Environment variables (good practice, even for frontend)
+.env
+.env.local
+.env.*.local
+
+# General log files
+*.log
+npm-debug.log*
+yarn-error.log
+yarn-debug.log
 
 # Sass cache
-.sass-cache
+.sass-cache/
 
-# Windows image file caches
+# ----------------------------------------------------------------
+# Common IDE / Editor Config
+# ----------------------------------------------------------------
+# PhpStorm, WebStorm, etc.
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Editor swap/backup files
+*.swp
+*~
+
+# ----------------------------------------------------------------
+# Windows Specific
+# ----------------------------------------------------------------
+# File caches
 Thumbs.db
 ehthumbs.db
 
-# Folder config file
+# Folder config
 Desktop.ini
 
-# Recycle Bin used on file shares
+# Recycle Bin
 $RECYCLE.BIN/
 
 # Windows Installer files
@@ -26,21 +66,15 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+# ----------------------------------------------------------------
+# macOS Specific
+# ----------------------------------------------------------------
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Thumbnails
 ._*
 
-# Files that might appear in the root of a volume
+# Volume metadata
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
@@ -48,7 +82,7 @@ $RECYCLE.BIN/
 .Trashes
 .VolumeIcon.icns
 
-# Directories potentially created on remote AFP share
+# AFP network shares
 .AppleDB
 .AppleDesktop
 Network Trash Folder
