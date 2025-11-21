@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Grid, Inline-Grid & Subgrid</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <style>
+        /* --- Allgemeine Basis-Styles --- */
+        body {
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+            padding: 1.25rem;
+            max-width: 50rem;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 0.2rem solid rgb(51 51 51);
+            padding-bottom: 0.625rem;
+        }
+
+        h2 {
+            margin-top: 2.5rem;
+            color: rgb(51 51 51);
+            border-left: 0.4rem solid rgb(255 204 0);
+            padding-left: 0.625rem;
+        }
+
+        /* Styles für die Container (Hintergrund/Rahmen) */
+        .container {
+            background-color: rgb(240 240 240);
+            border: 0.2rem solid rgb(51 51 51);
+            padding: 0.625rem;
+            margin-bottom: 0.625rem;
+        }
+
+        /* Styles für die normalen Grid-Items */
+        .item {
+            background-color: rgb(255 204 0);
+            padding: 0.625rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* --- 1. Block Grid Styles --- */
+        .block-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Zwei gleich große Spalten */
+            gap: 0.625rem;
+        }
+
+        /* --- 2. Inline Grid Styles --- */
+        .inline-grid {
+            display: inline-grid;
+            grid-template-columns: auto auto; /* Spalten passen sich Inhalt an */
+            gap: 0.4rem;
+            vertical-align: middle; /* Zentriert das Grid vertikal zur Textzeile */
+            padding: 0.4rem;
+        }
+
+        /* Override für Items im Inline-Grid (damit sie kleiner sind) */
+        .inline-grid .item {
+            padding: 0.1rem 0.3rem;
+            font-size: 0.9em;
+        }
+
+        /* --- 3. Subgrid Styles --- */
+        .main-grid {
+            display: grid;
+            /* 5 Spalten im Haupt-Raster */
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.625rem;
+        }
+
+        /* Der Container, der das Subgrid nutzt */
+        .subgrid-container {
+            /* Er nimmt im Haupt-Raster Platz ein (3 Spalten) */
+            grid-column: span 3;
+
+            /* Er wird selbst zum Grid ... */
+            display: grid;
+
+            /* ... und übernimmt die Spalten-Definition des Eltern-Elements */
+            grid-template-columns: subgrid;
+
+            /* Optik für den Subgrid-Container */
+            background-color: rgb(224 224 224);
+            border: 0.2rem dashed rgb(102 102 102);
+            padding: 0; /* Wichtig: Padding könnte die Ausrichtung stören, wenn nicht kompensiert */
+        }
+
+        .sub-item {
+            background-color: rgb(255 85 85);
+            color: white;
+            padding: 0.625rem;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>CSS Grid Showcase</h1>
+
+<h2>1. display: grid (Block-Ebene)</h2>
+<p>Der folgende Container nimmt standardmäßig die volle verfügbare Breite ein:</p>
+
+<div class="container block-grid">
+    <div class="item">A</div>
+    <div class="item">B</div>
+</div>
+
+<p>Dadurch wird der Textfluss vor und nach dem Grid unterbrochen (Zeilenumbruch).</p>
+
+<hr>
+
+<h2>2. display: inline-grid (Inline-Ebene)</h2>
+<p>
+    Hier ist ein Fließtext, und mittendrin befindet sich
+    <span class="container inline-grid">
+      <span class="item">X</span>
+      <span class="item">Y</span>
+    </span>
+    ein Inline-Grid. Es fließt mit dem Text und erzwingt keinen Umbruch.
+    Dank <code>vertical-align: middle</code> sitzt es mittig auf der Zeile.
+</p>
+
+<hr>
+
+<h2>3. Subgrid (Verschachtelung)</h2>
+<p>
+    Das (äußere) <strong>Main-Grid</strong> hat 5 Spalten.
+    Das mittlere Element (grau gestrichelt) ist ein Kind, das sich über 3 Spalten spannt.
+    Dessen Kinder (die roten Boxen) nutzen <code>subgrid</code>, um sich exakt an den Spalten des Main-Grids
+    auszurichten.
+</p>
+
+<div class="container main-grid">
+    <div class="item">1</div>
+
+    <div class="subgrid-container">
+        <div class="sub-item">Sub A</div>
+        <div class="sub-item">Sub B</div>
+        <div class="sub-item">Sub C</div>
+    </div>
+
+    <div class="item">5</div>
+</div>
+</body>
