@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>WAI-ARIA Tab Panel Example</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            padding: 20px;
+        }
+
+        ol[role="tablist"] {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 8px;
+        }
+
+        [role="tab"] a {
+            display: block;
+            padding: 10px 18px;
+            text-decoration: none;
+            background: rgb(51 51 51);
+            color: white;
+            border-radius: 4px 4px 0 0;
+        }
+
+        [role="tab"] a:hover {
+            color: rgb(45 168 255);
+        }
+
+        [role="tab"][aria-selected="true"] a {
+            background: white;
+            color: rgb(51 51 51);
+            border: 1px solid rgb(204 204 204);
+            border-bottom: none;
+        }
+
+        .panels {
+            border: 1px solid rgb(204 204 204);
+            padding: 20px;
+            border-radius: 0 4px 4px 4px;
+            margin-top: -1px;
+        }
+
+        [role="tabpanel"] {
+            display: none;
+        }
+
+        [role="tabpanel"][data-active="true"] {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+<ol role="tablist">
+    <li id="ch1Tab" role="tab" aria-selected="true" tabindex="0">
+        <a href="#ch1Panel">Chapter 1</a>
+    </li>
+    <li id="ch2Tab" role="tab" aria-selected="false" tabindex="-1">
+        <a href="#ch2Panel">Chapter 2</a>
+    </li>
+    <li id="quizTab" role="tab" aria-selected="false" tabindex="-1">
+        <a href="#quizPanel">Quiz</a>
+    </li>
+</ol>
+
+<div class="panels">
+    <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab" data-active="true">
+        Chapter 1 content goes here
+    </div>
+
+    <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab" data-active="false">
+        Chapter 2 content goes here
+    </div>
+
+    <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab" data-active="false">
+        Quiz content goes here
+    </div>
+</div>
+
+<script>
+    const tabs = document.querySelectorAll('[role="tab"]');
+    const panels = document.querySelectorAll('[role="tabpanel"]');
+
+    function activate(tab) {
+        tabs.forEach(t => {
+            const active = t === tab;
+            t.setAttribute("aria-selected", String(active));
+            t.setAttribute("tabindex", active ? "0" : "-1");
+        });
+
+        panels.forEach(p => {
+            p.dataset.active = String(p.id === tab.querySelector("a").getAttribute("href").substring(1));
+        });
+
+        tab.focus();
+    }
+
+    tabs.forEach(function (tab) {
+        tab.addEventListener("click", e => {
+            e.preventDefault();
+            activate(tab);
+        });
+    });
+</script>
+
+</body>
+</html>

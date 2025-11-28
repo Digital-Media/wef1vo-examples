@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WAI-ARIA Tooltip Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: system-ui, sans-serif;
+            background: rgb(247 247 247);
+        }
+
+        .text {
+            position: relative;
+            max-width: 480px;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        input[type="text"] {
+            padding: 8px 10px;
+            font-size: 1rem;
+            border-radius: 4px;
+            border: 1px solid rgb(204 204 204);
+            width: 100%;
+            max-width: 260px;
+        }
+
+        input[type="text"]:focus-visible {
+            outline: 3px solid rgb(0 164 230);
+            outline-offset: 2px;
+            border-color: rgb(0 164 230);
+        }
+
+        .tooltip {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            margin-top: 6px;
+            padding: 6px 10px;
+            background: rgb(51 51 51);
+            color: rgb(255 255 255);
+            font-size: 0.85rem;
+            border-radius: 4px;
+            max-width: 260px;
+            box-shadow: 0 2px 6px rgb(0 0 0 / 0.25);
+            z-index: 10;
+        }
+
+        .tooltip::before {
+            content: "";
+            position: absolute;
+            top: -6px;
+            left: 16px;
+            border-width: 0 6px 6px 6px;
+            border-style: solid;
+            border-color: transparent transparent rgb(51 51 51) transparent;
+        }
+
+        div.tooltip[aria-hidden="true"] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="text">
+    <label id="tp1-label" for="first">First Name:</label>
+    <input type="text"
+           id="first"
+           name="first"
+           size="20"
+           aria-labelledby="tp1-label"
+           aria-describedby="tp1"
+           aria-required="false">
+    <div id="tp1" class="tooltip" role="tooltip" aria-hidden="true">
+        Your first name is optional
+    </div>
+</div>
+
+<script>
+    function showTip(el) {
+        el.setAttribute("aria-hidden", "false");
+    }
+
+    function hideTip(el) {
+        el.setAttribute("aria-hidden", "true");
+    }
+
+    const input = document.getElementById("first");
+    const tooltip = document.getElementById("tp1");
+
+    input.addEventListener("focus", function () {
+        return showTip(tooltip);
+    });
+    input.addEventListener("blur", function () {
+        return hideTip(tooltip);
+    });
+
+    input.addEventListener("mouseenter", function () {
+        return showTip(tooltip);
+    });
+    input.addEventListener("mouseleave", function () {
+        return hideTip(tooltip);
+    });
+</script>
+</body>
+</html>
