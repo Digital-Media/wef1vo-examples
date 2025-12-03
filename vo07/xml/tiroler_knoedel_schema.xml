@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rezept quelle="https://www.ichkoche.at/der-klassische-tiroler-knoedel-rezept-4386">
+<rezept xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://www.hochleitner.cc/schemas/rezept.xsd"
+        quelle="https://www.ichkoche.at/der-klassische-tiroler-knoedel-rezept-4386">
     <gericht>Der klassische Tiroler Knödel</gericht>
     <zutaten>
         <zutat>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="rezept">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="gericht"/>
+                <xs:element ref="zutaten"/>
+                <xs:element ref="zubereitung"/>
+            </xs:sequence>
+            <xs:attribute name="quelle" type="xs:anyURI" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="gericht" type="xs:string"/>
+
+    <xs:element name="zutaten">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="zutat"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="zubereitung">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="schritt" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="zutat">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ingredienz" type="xs:string"/>
+                <xs:element name="menge" type="xs:decimal"/>
+                <xs:element name="einheit" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

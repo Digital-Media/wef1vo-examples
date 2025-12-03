@@ -1,0 +1,11 @@
+%YAML 1.2
+---
+rezept: Tiroler Knödel
+schwierigkeit: einfach
+vegetarisch: false
+...
+---
+rezept: Käsespätzle
+schwierigkeit: einfach
+vegetarisch: true
+...
