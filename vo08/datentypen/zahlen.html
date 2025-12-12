@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Datentypen Number & BigInt</title>
+</head>
+<body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
+<script>
+    "use strict";
+
+    // 1. Standard Numbers (Gleitkomma)
+    console.log("--- Normale Numbers ---");
+    console.log("Pi:", 3.1415);
+    console.log("Wissenschaftlich:", 6.02e23);
+
+    // 2. Das Problem: Die Grenze der Genauigkeit
+    console.log("\n--- Das Problem: Präzisionsverlust ---");
+
+    // Number.MAX_SAFE_INTEGER ist die größte sichere Ganzzahl (2^53 - 1)
+    let maxSafe = Number.MAX_SAFE_INTEGER;
+
+    console.log("Max Safe Integer:     ", maxSafe);       // Endet auf ...991
+    console.log("Max + 1 (geht noch):  ", maxSafe + 1);   // Endet auf ...992
+    console.log("Max + 2 (FEHLER!):    ", maxSafe + 2);   // Endet immer noch auf ...992!
+
+    // Erklärung: Hier reicht die 64-Bit Darstellung nicht mehr aus,
+    // um die Einerstelle präzise zu speichern.
+
+    // 3. Die Lösung: BigInt
+    console.log("\n--- Die Lösung: BigInt ---");
+
+    let bigMax = 9007199254740991n; // Gleiche Zahl als BigInt
+
+    console.log("BigInt (Original):    ", bigMax);
+    console.log("BigInt + 2n (Korrekt):", bigMax + 2n);   // Endet korrekt auf ...993n
+
+    // 4. Schöne Ausgabe (ohne 'n')
+    console.log("\n--- Ausgabe formatieren ---");
+    let ergebnis = bigMax + 2n;
+    console.log("Rohdaten in Konsole:  ", ergebnis);      // Zeigt das 'n' (je nach Browser)
+    console.log("Als String (ohne n):  ", ergebnis.toString());
+</script>
+</body>
+</html>

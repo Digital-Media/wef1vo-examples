@@ -13,14 +13,17 @@
 
     // Überprüfung auf Wertegleichheit
     if (zahl == zahlAlsString) {
-        document.writeln("<p>Wert gleich (durch automatische Typumwandlung).</p>");
+        console.log("--- zahl == zahlAlsString: if ---")
+        console.log("Wert gleich (durch automatische Typumwandlung).");
     }
 
     // Überprüfung auf Werte- und Typgleichheit
     if (zahl === zahlAlsString) {
-        document.writeln("<p>Wert und Typ gleich.</p>"); // not gonna happen
+        console.log("--- zahl === zahlAlsString: if ---")
+        console.log("Wert und Typ gleich."); // not gonna happen
     } else {
-        document.writeln("<p>Wert gleich, Typ aber unterschiedlich (Zahl vs. String).</p>");
+        console.log("--- zahl === zahlAlsString: else ---")
+        console.log("Wert gleich, Typ aber unterschiedlich (Zahl vs. String).");
     }
 </script>
 </body>

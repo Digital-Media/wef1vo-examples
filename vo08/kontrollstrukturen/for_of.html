@@ -2,19 +2,18 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <title>Funktionen mit Default-Parameter</title>
+    <title>for...of-Schleife</title>
 </head>
 <body>
 <p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
-    function quadrat(x = 0) {
-        return x * x;
-    }
+    let namen = ["Yara", "Tariq", "Alex"];
 
-    console.log("Mit Argument:", quadrat(5)); // 25
-    console.log("Ohne Argument:", quadrat()); // 0
+    for (const element of namen) {
+        console.log(element);
+    }
 </script>
 </body>
 </html>

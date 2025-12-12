@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Anonyme Funktionen und Arrow-Functions</title>
+</head>
+<body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
+<script>
+    "use strict";
+
+    // Anonyme Funktionsdefinition: Einer Variable wird eine Funktion ohne Namen mit einem Parameter x zugewiesen
+    const calcAsAnonFunction = function (x) {
+        return x * x;
+    };
+
+    // Der Aufruf erfolgt über den Variablennamen
+    console.log("Anonyme Funktion:", calcAsAnonFunction(4));
+
+    // Pfeilfunktionsdefinition: Anstatt function zu schreiben, werden nur zwei Klammern mit dem Parameter geschrieben.
+    // Der Körper der Funktion folgt nach dem Pfeil (=>) in geschwungenen Klammern
+    const calcAsArrowFunction = (x) => {
+        return x * x;
+    };
+
+    // Aufruf (identisch)
+    console.log("Arrow Function:", calcAsArrowFunction(4));
+
+    // Kurze Pfeilfunktionen: Hat die Funktion genau einen Parameter, können die runden Klammern entfallen.
+    // Besteht der Körper der Funktion aus genau einer Anweisung, können auch die geschwungenen Klammern wegfallen.
+    const calcAsShortArrowFunction = x => x * x;
+
+    // Aufruf (identisch)
+    console.log("Kurze Arrow-Function:", calcAsShortArrowFunction(4));
+</script>
+</body>
+</html>

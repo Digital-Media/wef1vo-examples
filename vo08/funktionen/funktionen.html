@@ -5,29 +5,33 @@
     <title>Funktionen</title>
 </head>
 <body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
+    // Einfache Funktion ohne Parameter mit Ausgabe in der Konsole (Definition)
     function sayHello() {
         console.log("Hallo Welt!");
-        document.write("<p>Hallo Welt!</p>");
     }
 
+    // Aufruf der einfachen Funktion
     sayHello();
 
+    // Parametrisierte Funktion (ein beliebiger Wert kann beim Aufruf übergeben werden (Definition)
     function saySomething(message) {
         console.log(message);
-        document.write("</p>" + message + "</p>");
     }
 
+    // Aufruf der Funktion mit Parameter
     saySomething("Hallo Du!");
 
+    // Funktion mit Parameter. Dieser wird in der Funktion verändert
     function saySomethingWithChange(message) {
         message += " So schauts aus.";
         console.log(message);
-        document.write("</p>" + message + "</p>");
     }
 
+    // Aufruf der Funktion. Der "äußere" Wert (text) bleibt unverändert
     const text = "Der Text bleibt.";
     saySomethingWithChange(text);
     console.log(text);

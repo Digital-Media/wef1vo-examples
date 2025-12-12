@@ -5,6 +5,7 @@
     <title>Funktionen &ndash; Primzahl-Test</title>
 </head>
 <body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
@@ -20,8 +21,8 @@
         return isPrimeNumber;
     }
 
-    const x = 5;
-    document.write(x + " ist " + (isPrime(x) ? "eine" : "keine") + " Primzahl");
+    const x = 3;
+    console.log("%d ist %s Primzahl", x, isPrime(x) ? "eine" : "keine");
 </script>
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Datentyp Array</title>
+</head>
+<body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
+
+<script>
+    "use strict";
+
+    // 1. Array mit Strings
+    // Index:      0       1        2
+    let namen = ["Yara", "Tariq", "Alex"];
+
+    console.log("--- Namensliste ---");
+    console.log("Ganzes Array:", namen);
+    console.log("Zweiter Name (Index 1):", namen[1]); // Zugriff über Index
+
+    // 2. Array mit Zahlen
+    let primzahlen = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
+
+    console.log("\n--- Zahlen ---");
+    console.log("Primzahlen:", primzahlen);
+    console.log("Anzahl der Elemente:", primzahlen.length); // Eigenschaft length
+
+    // 3. Gemischtes Array (String, Zahl, Array)
+    // Besonderheit in JS: Datentypen können gemischt werden
+    let kursDaten = ["WEF1VO", 2025, ["YouTube", "Microsoft Teams"]];
+
+    console.log("\n--- Gemischtes & verschachteltes Array ---");
+    console.log("Kurskürzel:", kursDaten[0]);
+    console.log("Jahr:", kursDaten[1]);
+
+    // Zugriff auf das Array im Array
+    console.log("Inhalt Index 2:", kursDaten[2]);
+
+    // Zugriff auf einen Wert IM verschachtelten Array
+    // kursDaten[2] -> liefert das innere Array
+    // [1] -> greift auf das zweite Element des inneren Arrays zu
+    console.log("Zweite Plattform:", kursDaten[2][1]); // Gibt "Microsoft Teams" aus
+</script>
+</body>
+</html>

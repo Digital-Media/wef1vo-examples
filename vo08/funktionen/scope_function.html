@@ -5,6 +5,7 @@
     <title>Scope &ndash; Mit var kein Block Scope, dafür Function Scope</title>
 </head>
 <body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
@@ -12,11 +13,11 @@
 
     function f() {
         var enterBlock = true;
-        document.writeln(scope); // undefined
+        console.log(scope); // undefined
         if (enterBlock) {
             var scope = "local";
         }
-        document.writeln(scope); // local
+        console.log(scope); // local
     }
 
     f();

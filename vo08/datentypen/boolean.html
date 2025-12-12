@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Datentyp Boolean</title>
+</head>
+<body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
+<script>
+    "use strict";
+
+    // 1. Direkte Zuweisung
+    let lichtAn = true;
+    let istDunkel = false;
+
+    console.log("Licht an:", lichtAn);
+    console.log("Ist dunkel:", istDunkel);
+
+    // 2. Boolean als Ergebnis eines Vergleichs
+    let a = 10;
+    let b = 20;
+    let vergleich = a > b; // 10 ist nicht größer als 20
+
+    console.log("Ist 10 > 20?", vergleich); // false
+    console.log("Ist 10 === 10?", 10 === 10); // true
+</script>
+</body>
+</html>

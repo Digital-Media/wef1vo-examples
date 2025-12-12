@@ -5,6 +5,7 @@
     <title>Scope &ndash; Block Scope mit let</title>
 </head>
 <body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
@@ -12,12 +13,12 @@
 
     function f() {
         let enterBlock = true;
-        document.writeln(scope); // global
+        console.log(scope); // global
         if (enterBlock) {
             let scope = "local";
-            document.writeln(scope); // local
+            console.log(scope); // local
         }
-        document.writeln(scope); // global
+        console.log(scope);// global
     }
 
     f();

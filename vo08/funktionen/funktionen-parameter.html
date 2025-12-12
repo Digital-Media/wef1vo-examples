@@ -5,24 +5,20 @@
     <title>Funktionen und Parameter</title>
 </head>
 <body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
     function logData(first, last) {
-        console.log("Anzahl der Argumente: " + arguments.length);
-        console.log("Vorname: " + first);
-        console.log("Nachname: " + last);
-        document.write("<ul>");
-        document.write("<li>Anzahl der Argumente: " + arguments.length + "</li>");
-        document.write("<li>Vorname: " + first + "</li>");
-        document.write("<li>Nachname: " + last + "</li>");
+        console.log("---");
+        console.log("Anzahl der Argumente:", arguments.length);
+        console.log("Vorname:", first);
+        console.log("Nachname:", last);
         if (arguments.length > 2) {
             for (let i = 2; i < arguments.length; i++) {
-                console.log("Zusätzlich: " + arguments[i]);
-                document.write("<li>Zusätzlich: " + arguments[i] + "</li>");
+                console.log("Zusätzlich:", arguments[i]);
             }
         }
-        document.write("</ul>");
     }
 
     logData("John", "Doe"); // Vorname: John, Nachname: Doe

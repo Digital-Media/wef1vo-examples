@@ -5,6 +5,7 @@
     <title>Scope &ndash; 2x global</title>
 </head>
 <body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
@@ -12,11 +13,11 @@
 
     function f() {
         scope = "local";
-        document.writeln(scope);
+        console.log(scope);
     }
 
     f(); // local
-    document.writeln(scope); // local
+    console.log(scope); // local
 </script>
 </body>
 </html>

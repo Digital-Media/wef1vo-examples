@@ -5,20 +5,21 @@
     <title>Funktionen mit Rest-Parameter</title>
 </head>
 <body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
     function addValues(...numbers) {
         let sum = 0;
-        for (let i = 0; i < numbers.length; i++) {
-            sum += numbers[i];
+        for (let number of numbers) {
+            sum += number;
         }
         return sum;
     }
 
-    document.write("<p>3 Argumente: " + addValues(1, 2, 3) + "</p>"); // 6
-    document.write("<p>5 Argumente: " + addValues(1, 2, 3, 7, 11) + "</p>"); // 24
-    document.write("<p>10 Argumente: " + addValues(1, 2, 3, 7, 11, 81, 19, 2, 33, 10) + "</p>"); // 169
+    console.log("3 Argumente:", addValues(1, 2, 3)); // 6
+    console.log("5 Argumente:", addValues(1, 2, 3, 7, 11)); // 24
+    console.log("10 Argumente:", addValues(1, 2, 3, 7, 11, 81, 19, 2, 33, 10)); // 169
 </script>
 </body>
 </html>

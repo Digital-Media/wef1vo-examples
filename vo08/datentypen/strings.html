@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Datentyp String</title>
+</head>
+<body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
+<script>
+    "use strict";
+
+    // String Variable
+    let name = "Welt";
+    // Integer Variablen
+    let a = 5, b = 10;
+
+    // Herkömmliche Konkatenation
+    let msgAlt = "Hallo " + name + ", Ergebnis: " + (a + b);
+    console.log(msgAlt);
+
+    // Modern mit Template Literals
+    let msgNeu = `Hallo ${name}, Ergebnis: ${a + b}`;
+    console.log(msgNeu);
+
+    // Mehrzeiliger String
+    let html = `<div>
+  <h1>Titel</h1>
+  <p>Ein Absatz über mehrere Zeilen.</p>
+</div>`;
+    console.log(html);
+</script>
+</body>
+</html>

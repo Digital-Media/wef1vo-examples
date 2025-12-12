@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Datentypen null & undefined</title>
+</head>
+<body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
+<script>
+    "use strict";
+
+    // 1. undefined
+    // Eine Variable wird deklariert, aber nicht initialisiert.
+    // Der Wert ist automatisch 'undefined'.
+    let nochNichtDefiniert;
+    console.log("Wert von 'nochNichtDefiniert':", nochNichtDefiniert);
+
+    // 2. null
+    // Eine Variable soll explizit "leer" sein.
+    // Dies muss manuell zugewiesen werden.
+    let istLeer = null;
+    console.log("Wert von 'istLeer':", istLeer);
+</script>
+</body>
+</html>

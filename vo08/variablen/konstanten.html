@@ -5,25 +5,28 @@
     <title>Konstanten</title>
 </head>
 <body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
+
     // Definition:
     const LIMIT = 3600;
     const DEFAULT_NAME = "John Doe";
     const ALTER = 7 + 12;
 
-    // Änderung erzeugt Fehler (einkommentieren):
+    // Eine Änderung der Konstante erzeugt einen Fehler (einkommentieren):
     //LIMIT = 5000;
-    document.write("<p>" + LIMIT + "</p>"); // 3600
-    document.write("<p>" + DEFAULT_NAME + "</p>"); // John Doe
-    document.write("<p>" + ALTER + "</p>"); // 19
+
+    console.log("LIMIT:", LIMIT); // 3600
+    console.log("DEFAULT_NAME:", DEFAULT_NAME); // John Doe
+    console.log("ALTER:", ALTER); // 19
 
     // Aber vorsicht: const heißt nur, eine neue Zuweisung darf nicht passieren, die Daten dahinter können sich ändern.
     // Das folgende Beispiel ist okay und erzeugt keinen Fehler
     const myArray = [1, 2, 3];
-    document.write("<p>myArray vorher: " + myArray + "</p>"); // 1,2,3
+    console.log("myArray vorher:", myArray); // 1,2,3
     myArray.push(4);
-    document.write("<p>myArray nachher: " + myArray + "</p>"); // 1,2,3,4
+    console.log("myArray nachher:", myArray); // 1,2,3,4
 </script>
 </body>
 </html>
