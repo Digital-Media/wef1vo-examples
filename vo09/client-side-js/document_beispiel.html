@@ -2,22 +2,12 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <title>Neues Dokument öffnen</title>
+    <title>Dokument-Eigenschaften auslesen</title>
+    <script src="document-demo.js" defer></script>
 </head>
 <body>
-<h1>Altes Dokument</h1>
-<a href="javascript:newDocument()">Neues Dokument erzeugen</a>
-
-<script>
-    "use strict";
-
-    function newDocument() {
-        document.open();
-        document.write("<h1>Neues Dokument</h1>");
-        document.write("<a href='document_beispiel.html'>Altes Dokument laden</a>");
-        document.title = "Neues Dokument ist da!";
-        document.close();
-    }
-</script>
+<h1>Dokument-Manipulation</h1>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
+<button type="button" onclick="showInfo()">Infos anzeigen & Titel ändern</button>
 </body>
 </html>

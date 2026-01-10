@@ -5,17 +5,21 @@
     <title>Vordefinierte Objekte: Math</title>
 </head>
 <body>
-<p>Diese Seite ist leer, denn es werden nur Ausgaben in der Console erzeugt. Öffnen Sie Ihre DevTools (F12) und wechseln
-    Sie auf den Console Tab.</p>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
-    // Pi ausgeben
+    // Konstanten
     console.log(Math.PI); // 3.141592653589793
-    // e ausgeben
-    console.log(Math.E); // 2.718281828459045
-    // sin von 90 berechnen
-    console.log(Math.sin(Math.PI / 2)); // 1
+    // Runden
+    console.log(Math.round(4.6)); // 5
+    console.log(Math.floor(4.9)); // 4
+    // Zufallszahl zwischen 1 und 10 (Ganzzahl)
+    const randomInt = Math.floor(Math.random() * 10) + 1;
+    console.log(randomInt); // z.B. 2
+    // Maximum ermitteln (Spread-Operator '...' entpackt das Array)
+    const values = [10, 42, 5, 100];
+    console.log(Math.max(...values)); // 100
 </script>
 </body>
 </html>

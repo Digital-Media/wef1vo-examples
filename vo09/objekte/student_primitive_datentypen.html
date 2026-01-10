@@ -5,8 +5,7 @@
     <title>Studierende*r nur mit primitiven Datentypen</title>
 </head>
 <body>
-<p>Diese Seite ist leer, denn es werden nur Ausgaben in der Console erzeugt. Öffnen Sie Ihre DevTools (F12) und wechseln
-    Sie auf den Console Tab.</p>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
@@ -14,11 +13,11 @@
     let studentName = "John Doe";
     let studentAge = 22;
     let studentProgram = "MTD";
-    let studentLanguages = ["Java", "Python"];
+    let studentLanguages = ["Java", "C#"];
 
     // Ausgabe bzw. Änderung der Daten
     function showLanguages() {
-        console.log(studentName + " (" + studentAge + ", " + studentProgram + ") beherrscht diese Sprachen: " + studentLanguages);
+        console.log(`${studentName} (${studentAge}, ${studentProgram}) beherrscht diese Sprachen: ${studentLanguages}`);
     }
 
     function learnNewLanguage(language) {
@@ -26,11 +25,11 @@
     }
 
     // Aufrufe
-    showLanguages(); // Java,Python
+    showLanguages(); // Java,C#
 
     learnNewLanguage("JavaScript");
 
-    showLanguages(); // Java,Python,JavaScript
+    showLanguages(); // Java,C#,JavaScript
 </script>
 </body>
 </html>

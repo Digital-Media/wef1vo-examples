@@ -5,30 +5,24 @@
     <title>Vordefinierte Objekte: Array</title>
 </head>
 <body>
-<p>Diese Seite ist leer, denn es werden nur Ausgaben in der Console erzeugt. Öffnen Sie Ihre DevTools (F12) und wechseln
-    Sie auf den Console Tab.</p>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
-    // Leeres Array (besser mit [] initialisieren, hier nur als Demonstration)
-    const a1 = new Array();
-    console.log(a1);  // []
-    // Array mit 3 Einträgen (3x undefined, geht nur mit new Array())
-    const a2 = new Array(3);
-    console.log(a2); // [undefined, undefined, undefined]
-    // Array mit den Einträgen 1 und 2 (als Array Literal)
-    const a3 = [1, 2];
-    console.log(a3); // [1, 2]
+    const grades = [1, 2, 3, 4, 5];
 
-    // Wert 5 zu a1 hinzufügen
-    a1.push(5);
-    console.log(a1); // [5]
-    // a1 und a3 zu a4 verknüpfen
-    const a4 = a1.concat(a3);
-    console.log(a4); // [5, 1, 2]
-    // a4 sortieren
-    a4.sort();
-    console.log(a4); // [1, 2, 5]
+    // 1. Element hinzufügen
+    grades.push(1);
+    console.log(grades); // [1, 2, 3, 4, 5, 1]
+    // 2. Filtern (nur positive Noten <= 4)
+    // Die Arrow-Function übergibt jedes Element im Array und gibt nur die zurück, die <= 4 sind
+    const passed = grades.filter(n => n <= 4);
+    console.log(passed); // [1, 2, 3, 4, 1]
+    // 3. Transformieren (Noten verdoppeln - Mapping)
+    const doubled = passed.map(n => n * 2);
+    console.log(doubled); // [2, 4, 6, 8, 2]
+    // 4. Prüfen ob enthalten
+    console.log(grades.includes(5)); // true
 </script>
 </body>
 </html>

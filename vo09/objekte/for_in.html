@@ -2,34 +2,24 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <title>for/in-Schleife</title>
+    <title>for...in-Schleife</title>
 </head>
 <body>
-<p>Diese Seite ist leer, denn es werden nur Ausgaben in der Console erzeugt. Öffnen Sie Ihre DevTools (F12) und wechseln
-    Sie auf den Console Tab.</p>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
-    // for-in mit einem "klassischen" Objekt
     const student = {
         name: "John Doe",
         age: 22,
         program: "MTD",
-        languages: ["Java", "Python"]
+        languages: ["Java", "C#"]
     };
 
     for (const property in student) {
-        console.log("Eigenschaft: " + property);
-        console.log("Wert: " + student[property]);
+        console.log("Eigenschaft:", property);
+        console.log("Wert:", student[property]);
     }
-
-    // for-in mit einem Array
-    /*const numbers = [1, 2, 3, 4, 5];
-
-    for (const index in numbers) {
-        console.log("Eigenschaft: " + index);
-        console.log("Wert: " + numbers[index]);
-    }*/
 </script>
 </body>
 </html>

@@ -5,8 +5,7 @@
     <title>Studierende*r mit Klassendefinition</title>
 </head>
 <body>
-<p>Diese Seite ist leer, denn es werden nur Ausgaben in der Console erzeugt. Öffnen Sie Ihre DevTools (F12) und wechseln
-    Sie auf den Console Tab.</p>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
@@ -20,7 +19,7 @@
         }
 
         showLanguages() {
-            console.log(this.name + " (" + this.age + ", " + this.program + ") beherrscht diese Sprachen: " + this.languages);
+            console.log(`${this.name} (${this.age}, ${this.program}) beherrscht diese Sprachen: ${this.languages}`);
         }
 
         learnNewLanguage(language) {
@@ -29,13 +28,13 @@
     }
 
     // Anlegen der Studierenden-Objekte
-    const student1 = new Student("John Doe", 22, "MTD", ["Java", "Python"]);
+    const student1 = new Student("John Doe", 22, "MTD", ["Java", "C#"]);
     const student2 = new Student("Jane Doe", 25, "SE", ["Pascal", "C", "Java"]);
 
     // Aufrufe
-    student1.showLanguages(); // Java,Python
+    student1.showLanguages(); // Java,C#
     student1.learnNewLanguage("JavaScript");
-    student1.showLanguages(); // Java,Python,JavaScript
+    student1.showLanguages(); // Java,C#,JavaScript
     student2.showLanguages(); // Pascal,C,Java
 </script>
 </body>

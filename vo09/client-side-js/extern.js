@@ -1,3 +1,3 @@
 "use strict";
 
-document.write("<p>Hallo Welt!</p>");
+document.getElementById("output").innerHTML = "<p>Hallo Welt!</p>";

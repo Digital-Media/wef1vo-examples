@@ -5,23 +5,27 @@
     <title>Vordefinierte Objekte: Date</title>
 </head>
 <body>
-<p>Diese Seite ist leer, denn es werden nur Ausgaben in der Console erzeugt. Öffnen Sie Ihre DevTools (F12) und wechseln
-    Sie auf den Console Tab.</p>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
     const d = new Date();
 
-    // Komplettes Datum formatiert ausgeben
-    console.log(d); // z.B. Mon Dec 02 2024 16:13:23 GMT+0100 (Central European Standard Time)
+    // Komplettes Datum ausgeben (entspricht d.toString())
+    console.log(d); // z.B. Fri Jan 09 2026 13:29:12 GMT+0100 (Central European Standard Time)
     // Jahr ausgeben
-    console.log(d.getFullYear()); // z.B. 2024
+    console.log(d.getFullYear()); // z.B. 2026
     // Wochentag ausgeben
-    console.log(d.getDay()); // z.B. 1 für Montag
+    console.log(d.getDay()); // z.B. 5 für Freitag
     // Stunde ausgeben
-    console.log(d.getHours()); //z.B. 16
+    console.log(d.getHours()); //z.B. 13
     // Minute ausgeben
-    console.log(d.getMinutes()); // z.B. 13
+    console.log(d.getMinutes()); // z.B. 29
+    // Formatiert für Österreich ausgeben
+    const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+    console.log(d.toLocaleDateString("de-AT", options)); // z.B. Freitag, 9. Januar 2026
+    // Unix-Timestamp
+    console.log(Date.now()); // z.B. 1767961752219
 </script>
 </body>
 </html>

@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <title>JSON Example</title>
+    <title>JavaScript-Objekte und JSON</title>
     <meta charset="utf-8">
 </head>
 <body>
-<p>Diese Seite ist leer, denn es werden nur Ausgaben in der Console erzeugt. Öffnen Sie Ihre DevTools (F12) und wechseln
-    Sie auf den Console Tab.</p>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
-    const jsonObject = {
-        "firstName": "John",
-        "lastName": "Doe",
-        "age": 25,
-        "address": {
-            "street": "21 Doe St.",
-            "city": "Doeville",
-            "zip": "12345",
-            "state": "NY",
-            "country": "USA"
-        },
-        "phoneNumbers": [
+    const rezept = {
+        "gericht": "Der klassische Tiroler Knödel",
+        "zutaten": [
             {
-                "type": "home",
-                "number": "800 123 456-789"
+                "ingredienz": "Semmelwürfel",
+                "menge": 350,
+                "einheit": "g"
             },
             {
-                "type": "work",
-                "number": "800 999 666-333"
+                "ingredienz": "Milch",
+                "menge": 200,
+                "einheit": "ml"
             }
+        ],
+        "zubereitung": [
+            "Semmelwürfel mit Milch und Eiern vermengen und 20 bis 30 Minuten ziehen lassen.",
+            "Kleinwürfelig geschnittenen Speck und fein gewiegte Bergsteigerwurst in zerlassener Butter gemeinsam mit Zwiebeln, Petersilie und Schnittlauch anbraten und mit Salz und Muskatnuss abschmecken. Mehl darüber streuen und aus allen Zutaten eine feste, aber nicht zu feuchte Masse kneten."
         ]
     };
 
-    console.log(jsonObject.lastName); // Doe
-    console.log(jsonObject.address.street); // 21 Doe St.
-    console.log(jsonObject.phoneNumbers[1].number); // 800 999 666-333
+    // Zugriff auf einfache Eigenschaft
+    console.log(rezept.gericht); // Der klassische Tiroler Knödel
+    // Zugriff auf Array an Index 0, davon Eigenschaft 'ingredienz'
+    console.log(rezept.zutaten[0].ingredienz); // Semmelwürfel
+    // Zugriff auf Array an Index 1, davon Eigenschaft 'menge'
+    console.log(rezept.zutaten[1].menge); // 200
+    // Zugriff auf zweiten Zubereitungsschritt
+    console.log(rezept.zubereitung[1]); // Kleinwürfelig geschnittenen Speck ...
 </script>
 </body>
 </html>

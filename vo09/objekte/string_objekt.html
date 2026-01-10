@@ -5,8 +5,7 @@
     <title>Vordefinierte Objekte: String</title>
 </head>
 <body>
-<p>Diese Seite ist leer, denn es werden nur Ausgaben in der Console erzeugt. Öffnen Sie Ihre DevTools (F12) und wechseln
-    Sie auf den Console Tab.</p>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
@@ -14,10 +13,12 @@
 
     // Zeichen an Position ausgeben
     console.log(text.charAt(4)); // i
-    // Position des ersten Vorkommens eines Zeichens
-    console.log(text.indexOf("T")); // 19
-    // Substring ab Position 8
-    console.log(text.substr(8)); // ein langer Text
+    // Prüfen, ob "langer" enthalten ist (gibt true/false)
+    console.log(text.includes("langer")); // true
+    // Substring: Start (inkl.) bis Ende (exkl.)
+    console.log(text.substring(4, 7)); // ist
+    // Slice: Die letzten 4 Zeichen ausschneiden (Negativer Index)
+    console.log(text.slice(-4)); // Text
     // String bei den Leerzeichen teilen
     console.log(text.split(" ")); // ["Das", "ist", "ein", "langer", "Text"]
     // Länge des Strings
