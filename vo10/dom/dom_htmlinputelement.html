@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMLInputElement: Eigenschaften und Methoden</title>
+</head>
+<body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
+<script>
+    "use strict";
+
+    // 1. Container-Formular erstellen
+    const form = document.createElement("form");
+
+    // 2. Das Input-Element erstellen
+    const input = document.createElement("input");
+
+    // Typ ändern
+    input.type = "password";
+
+    // Autocomplete setzen (z.B. für Passwort-Manager)
+    input.autocomplete = "new-password";
+
+    input.placeholder = "Geheimcode eingeben";
+    input.value = "123456";
+
+    // Deaktivieren
+    input.disabled = true;
+
+    console.log("Aktueller Wert:", input.value);
+    console.log("Ist deaktiviert:", input.disabled);
+
+    // 3. Zusammenbauen
+    form.appendChild(input);
+    document.body.appendChild(form);
+</script>
+</body>
+</html>

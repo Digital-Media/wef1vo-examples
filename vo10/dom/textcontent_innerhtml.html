@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <title>Eigenschaft: textContent</title>
+    <title>Eigenschaft: textContent vs. innerHTML</title>
     <meta charset="utf-8">
 </head>
 <body>
@@ -12,8 +12,15 @@
 <script>
     "use strict";
 
-    document.write("<p>textContent: " + document.querySelector("div").textContent + "</p>");
-    document.write("<p>innerHTML: " + document.querySelector("div").innerHTML + "</p>");
+    const container = document.querySelector("div");
+
+    const pText = document.createElement("p");
+    pText.textContent = `textContent: ${container.textContent}`;
+
+    const pHtml = document.createElement("p");
+    pHtml.innerHTML = `innerHTML: ${container.innerHTML}`;
+
+    document.body.append(pText, pHtml);
 </script>
 </body>
 </html>

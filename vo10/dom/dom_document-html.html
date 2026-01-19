@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Document: Eigenschaften und Methoden (HTML-Spezifika)</title>
+</head>
+<body>
+<form action="mailto:me@example.com">
+    <label for="wef">Web Fundamentals</label>
+    <input type="radio" name="favorite" value="WEF1" id="wef"><br>
+    <label for="mco">Modern Code</label>
+    <input type="radio" name="favorite" value="MCO1" id="mco"><br>
+    <label for="gec">Game Engine Concepts</label>
+    <input type="radio" name="favorite" value="GEC1" id="gec"><br>
+    <button type="submit">Senden</button>
+</form>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
+<script>
+    "use strict";
+
+    console.log("Seitentitel:", document.title);
+    console.log("Body-Referenz:", document.body);
+
+    const favorites = document.getElementsByName("favorite");
+    console.log("Gefundene Radio-Buttons:", favorites.length);
+
+    // HTML-Spezifische Collections (automatisch indiziert)
+    console.log("Anzahl Formulare:", document.forms.length);
+    console.log("Anzahl Bilder:", document.images.length);
+    // Zugriff auf das erste Formular direkt über den Index oder ID/Name
+    console.log("Erstes Formular:", document.forms[0]);
+
+    // Cookies lesen und schreiben
+    // (Funktioniert meist nur, wenn die Seite über einen Server geladen wird)
+    document.cookie = "lecture=WEF1; SameSite=Lax";
+    console.log("Alle Cookies:", document.cookie);
+
+    // URL-Informationen
+    console.log("Aktuelle URL:", document.location.href);
+
+    // Schreiben ins Dokument (veraltet, nicht mehr verwenden, daher auskommentiert)
+    // document.open();
+    // document.write("<p>Hallo Welt!</p>");
+    // document.close();
+</script>
+</body>
+</html>

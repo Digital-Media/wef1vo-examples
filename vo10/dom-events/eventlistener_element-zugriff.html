@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Event-Handler &ndash; Element-Zugriff</title>
+</head>
+<body>
+<a href="https://www.fh-ooe.at/">Ein Link</a>
+<a href="https://orf.at/">Noch ein Link</a>
+
+<script>
+    "use strict";
+
+    function showURL(event) {
+        // Zugriff auf das Element, das den Listener ausgelöst hat
+        window.alert(event.currentTarget.href);
+        event.preventDefault();
+    }
+
+    const links = document.querySelectorAll("a");
+
+    // Jeden Link durchlaufen und Listener anhängen
+    for (const link of links) {
+        link.addEventListener("click", showURL);
+    }
+</script>
+</body>
+</html>

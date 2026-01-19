@@ -6,22 +6,31 @@
 </head>
 <body>
 <div><h1 id="title">Überschrift</h1><p>Hallo</p></div>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
-    // Variable theDiv enthält das <div>-Element aus dem Beispiel (also einen Knoten)
+    // Variable theDiv enthält das <div>-Element von oben (also einen Knoten)
     const theDiv = document.querySelector("div");
 
-    // Eigenschaften werden abgefragt und in Variablen gespeichert
-    const name = theDiv.nodeName; // DIV
-    const type = theDiv.nodeType; // 1
-    const h1 = theDiv.firstChild; // <h1>-Element
-    const p = theDiv.lastChild; // <p>-Element
+    console.log("Name des Knotens:", theDiv.nodeName); // Ausgabe: "DIV"
+    console.log("Typ des Knotens:", theDiv.nodeType);  // Ausgabe: 1
 
-    // Methoden werden auf Knoten ausgeführt
-    theDiv.replaceChild(p, h1); // ersetzt <h1> durch <p>, somit bleibt nur <p> übrig
-    theDiv.removeChild(p); // löscht <p> als Kindknoten von <div>
-    const nodes = theDiv.hasChildNodes(); // false
+    const h1 = theDiv.firstChild;
+    console.log("Erstes Kind (h1):", h1); // Gibt das <h1>-Element in der Konsole aus
+
+    const p = theDiv.lastChild;
+    console.log("Letztes Kind (p):", p); // Gibt das <p>-Element aus
+
+    // Ersetzen
+    theDiv.replaceChild(p, h1);
+    console.log("Nach replaceChild (h1 ist weg):", theDiv.innerHTML);
+
+    // Löschen
+    theDiv.removeChild(p);
+    console.log("Nach removeChild (leer):", theDiv.innerHTML);
+
+    console.log("Hat noch Kinder?", theDiv.hasChildNodes()); // Ausgabe: false
 </script>
 </body>
 </html>

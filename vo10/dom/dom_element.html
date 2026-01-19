@@ -14,17 +14,27 @@
     </style>
 </head>
 <body>
-
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
-    const heading = document.createElement("h1"); // Elementknoten erzeugen
-    heading.textContent = "Überschrift"; // Text setzen
-    heading.setAttribute("id", "important"); // setzt <h1> das id-Attribut mit dem Wert important
-    heading.id = "normal"; // Ändert den Wert der wieder auf normal
-    heading.className = "blue"; // Setzt die Klasse blue
-    heading.classList.add("underline"); // Fügt die Klasse underline hinzu
-    document.body.appendChild(heading); // Hängt <h1> als Kind von <body> an
+    const heading = document.createElement("h1");
+    heading.textContent = "Überschrift";
+
+    heading.setAttribute("id", "important");
+    console.log("ID gesetzt:", heading.id); // Ausgabe: "important"
+
+    heading.id = "normal";
+    console.log("ID geändert:", heading.getAttribute("id")); // Ausgabe: "normal"
+
+    heading.className = "blue";
+    console.log("Klasse gesetzt:", heading.className);
+
+    heading.classList.add("underline");
+    console.log("Klassenliste:", heading.classList); // DOMTokenList ["blue", "underline"]
+
+    document.body.appendChild(heading);
+    console.log("Element in den Body eingehängt:", heading);
 </script>
 </body>
 </html>

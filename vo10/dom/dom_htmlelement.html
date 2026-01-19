@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMLElement: Eigenschaften und Methoden</title>
+</head>
+<body>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
+<script>
+    "use strict";
+
+    const divElem = document.createElement("div");
+    divElem.textContent = "Hallo Welt!"; // Textinhalt setzen
+    divElem.lang = "de"; // Sprache setzen
+    divElem.style.marginTop = "2em"; // Stil-Eigenschaft setzen
+
+    console.log("Konfiguriertes Element:", divElem);
+    // In der Konsole kann man das Element aufklappen und die Styles prüfen
+
+    document.body.appendChild(divElem);
+</script>
+</body>
+</html>

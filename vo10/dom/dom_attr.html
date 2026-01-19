@@ -5,16 +5,22 @@
     <title>Attribute: Eigenschaften</title>
 </head>
 <body>
-
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
-    const divElem = document.createElement("div"); // Elementknoten erzeugen
+    const divElem = document.createElement("div");
     divElem.textContent = "An ordinary div";
-    const titleAttr = document.createAttribute("title"); // Attributknoten erzeugen
-    titleAttr.value = "Some Container"; // Inhalt setzen
-    divElem.setAttributeNode(titleAttr); // Attribut anhängen
-    document.body.appendChild(divElem); // Element ins Dokument hängen
+
+    const titleAttr = document.createAttribute("title");
+    titleAttr.value = "Some Container";
+    console.log("Attribut-Wert:", titleAttr.value);
+
+    divElem.setAttributeNode(titleAttr);
+    console.log("HTML mit Attribut:", divElem.outerHTML);
+    // Ausgabe z.B.: <div title="Some Container">An ordinary div</div>
+
+    document.body.appendChild(divElem);
 </script>
 </body>
 </html>

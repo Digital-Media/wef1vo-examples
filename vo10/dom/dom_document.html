@@ -17,20 +17,32 @@
 <div id="content">
     <p class="red underline">Red and Underlined</p>
 </div>
+<p>DevTools öffnen (F12) und auf den "Console"-Tab wechseln, um die Ausgabe des Beispiels zu sehen.</p>
 <script>
     "use strict";
 
-    // Eigenschaften des Dokuments in die Konsole ausgeben.
-    console.log(document.URL, document.characterSet, document.contentType, document.compatMode);
+    const content = document.getElementById("content");
+    console.log("Gefundenes Element (ID):", content);
 
-    // Methoden fragen Elemente aus dem Dokument ab und speichern das Ergebnis in Variablen
-    const content = document.getElementById("content"); // Element mit ID content
-    const body = document.getElementsByTagName("body")[0]; // Liefert das (erste und einzige) <body>-Element
-    const redUnder = document.getElementsByClassName("red underline"); // Speichert alle Elemente mit den Klassen red und underline
-    const pInDiv = document.querySelector("div p"); // Erstes p-Element, das in einem div vorkommt
+    const bodyList = document.getElementsByTagName("body");
+    const body = bodyList[0];
+    console.log("Gefundenes Body-Element:", body);
+
+    const redUnder = document.getElementsByClassName("red underline");
+    console.log("Anzahl Elemente mit Klassen:", redUnder.length);
+
+    const pInDiv = document.querySelector("div p");
+    console.log("QuerySelector Ergebnis:", pInDiv);
+
+    // Erstellen
     const newDiv = document.createElement("div");
+    console.log("Neu erstelltes DIV:", newDiv); // Zeigt <div></div> (noch leer)
+
     const text = document.createTextNode("Hallo Welt!");
+    console.log("Text-Knoten:", text);
+
     const idAttr = document.createAttribute("id");
+    console.log("Attribut-Knoten:", idAttr);
 </script>
 </body>
 </html>
