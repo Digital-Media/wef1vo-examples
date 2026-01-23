@@ -1,19 +1,20 @@
 {
-  "name": "hyp1_t1-sass-example",
+  "name": "wef1vo-sass-example",
   "version": "1.0.0",
   "description": "Example for using Sass in your project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "sass",
     "example",
     "project"
   ],
-  "author": "Wolfgang Hochleitner",
   "license": "ISC",
+  "author": "Wolfgang Hochleitner",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "sass": "^1.83.0"
+    "sass": "^1.97.3"
   }
 }

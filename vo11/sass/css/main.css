@@ -1,6 +1,7 @@
 body {
-  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-family: system-ui, sans-serif;
   color: #bada55;
+  background-color: rgb(41, 49, 51);
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -28,7 +29,7 @@ p {
 .message, .error, .status {
   border: 3px solid #ccc;
   padding: 10px;
-  color: #333;
+  color: #ccc;
 }
 
 .status {

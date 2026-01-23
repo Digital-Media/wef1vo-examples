@@ -1,1 +1,1 @@
-"use strict";document.addEventListener("DOMContentLoaded",(function(){const e=document.createElement("p");e.textContent="Here is some generated text.",document.body.appendChild(e)}));
+"use strict";const contentContainer=document.getElementById("content"),tools=["Node.js","Gulp","Sass","clean-css"];for(const t of tools){const o=document.createElement("p");o.classList.add("tool-card"),o.textContent=`Tool: ${t}`,contentContainer.appendChild(o)}

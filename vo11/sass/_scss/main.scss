@@ -10,6 +10,7 @@
 body {
   font-family: variables.$main-font;
   color: variables.$main-color;
+  background-color: variables.$bg-color;
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -38,7 +39,7 @@ p {
 .message {
   border: 3px solid #ccc;
   padding: 10px;
-  color: #333;
+  color: #ccc
 }
 
 .status {

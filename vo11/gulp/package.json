@@ -1,31 +1,27 @@
 {
-  "name": "hyp1_t1-gulp-example",
+  "name": "wef1vo-gulp-example",
   "version": "1.0.0",
   "description": "Example for using gulp tasks in your project",
-  "type": "module",
-  "main": "gulpfile.mjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "gulp",
     "example",
     "Hypermedia"
   ],
-  "author": {
-    "name": "Wolfgang Hochleitner",
-    "email": "wolfgang.hochleitner@fh-hagenberg.at",
-    "url": "https://about.me/wolfgang.hochleitner"
-  },
   "license": "ISC",
+  "author": "Wolfgang Hochleitner <wolfgang.hochleitner@fh-hagenberg.at> (https://about.me/wolfgang.hochleitner)",
+  "type": "module",
+  "main": "gulpfile.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
-    "browser-sync": "^3.0.3",
-    "gulp": "^5.0.0",
+    "browser-sync": "^3.0.4",
+    "gulp": "^5.0.1",
     "gulp-clean-css": "^4.3.0",
-    "gulp-eslint-new": "^2.4.0",
-    "gulp-sass": "^6.0.0",
+    "gulp-eslint-new": "^2.5.0",
+    "gulp-sass": "^6.0.1",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
-    "sass": "^1.83.0"
+    "sass": "^1.97.3"
   }
 }

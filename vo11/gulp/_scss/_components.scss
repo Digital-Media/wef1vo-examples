@@ -1,0 +1,10 @@
+@use "variables";
+
+.tool-card {
+  background-color: variables.$gray-light;
+  border: 1px solid variables.$gray-dark;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
