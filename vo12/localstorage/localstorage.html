@@ -16,19 +16,23 @@
 <section id="sticky" contenteditable="true"></section>
 
 <script>
+    const defaultText = "Schreib auf mich!";
     const note = document.getElementById("sticky");
+    const storedValue = localStorage.getItem("content");
 
-    if (localStorage.getItem("content")) {
-        note.innerHTML = localStorage.getItem("content");
+    if (storedValue) {
+        note.innerHTML = storedValue;
     } else {
-        note.innerHTML = "Schreib auf mich!";
+        note.innerHTML = defaultText;
     }
 
-    note.addEventListener("blur", function () {
-        if (this.textContent === "") {
+    note.addEventListener("blur", (event) => {
+        const plainText = event.target.textContent;
+        if (plainText.trim() === "" || plainText === defaultText) {
             localStorage.removeItem("content");
+            event.target.innerHTML = defaultText;
         } else {
-            localStorage.setItem("content", this.innerHTML);
+            localStorage.setItem("content", event.target.innerHTML);
         }
     });
 </script>

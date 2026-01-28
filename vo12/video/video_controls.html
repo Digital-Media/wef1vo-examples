@@ -20,26 +20,21 @@
 
 <script>
     // Wichtig: load und nicht DOMContentLoaded, damit Videos geladen und verfügbar sind
-    window.addEventListener("load", function () {
+    window.addEventListener("load", () => {
         const vid = document.getElementById("vid");
         const playPause = document.getElementById("playpause");
         const volUp = document.getElementById("volup");
         const volDown = document.getElementById("voldown");
-        playPause.addEventListener("click", function () {
-            if (vid.paused) {
-                vid.play();
-                playPause.textContent = "Pause";
-            } else {
-                vid.pause();
-                playPause.textContent = "Play";
-            }
+        playPause.addEventListener("click", () => {
+            vid.paused ? vid.play() : vid.pause();
+            playPause.textContent = vid.paused ? "Play" : "Pause";
         });
-        volUp.addEventListener("click", function () {
+        volUp.addEventListener("click", () => {
             if (vid.volume < 1) {
                 vid.volume += 0.1;
             }
         });
-        volDown.addEventListener("click", function () {
+        volDown.addEventListener("click", () => {
             if (vid.volume > 0) {
                 vid.volume -= 0.1;
             }

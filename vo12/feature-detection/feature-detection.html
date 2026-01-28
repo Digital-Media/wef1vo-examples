@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Native Feature Detection</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 400px;
+        }
+
+        li {
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .supported {
+            background-color: #d4edda;
+            color: #155724;
+            border-color: #c3e6cb;
+        }
+
+        .not-supported {
+            background-color: #f8d7da;
+            color: #721c24;
+            border-color: #f5c6cb;
+        }
+
+        .status-icon {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Browser Feature Support</h1>
+<p>Feature detection using JavaScript.</p>
+<ul id="features"></ul>
+<script>
+    const tests = {
+        "Canvas": () => {
+            // Create an element and check if "getContext() exists
+            const elem = document.createElement("canvas");
+            return !!(elem.getContext && elem.getContext("2d"));
+        },
+        "HTML5 Video": () => {
+            // Check if the method "canPlayType" exists
+            const elem = document.createElement("video");
+            return !!(elem.canPlayType);
+        },
+        "Geolocation": () => {
+            // Does the navigator have a "geolocation" property?
+            return "geolocation" in navigator;
+        },
+        "Local Storage": () => {
+            // Don't just check for the localStorage object but try to access it
+            // This helps with the private browsing mode where the object exists but does not always work
+            try {
+                localStorage.setItem("test", "test");
+                localStorage.removeItem("test");
+                return true;
+            } catch (e) {
+                return false;
+            }
+        },
+        "CSS Grid": () => {
+            // Native CSS Testing
+            return CSS.supports("display", "grid");
+        }
+    };
+
+    const list = document.getElementById("features");
+
+    for (const [featureName, checkFunction] of Object.entries(tests)) {
+        const li = document.createElement("li");
+        const isSupported = checkFunction();
+        li.className = isSupported ? "supported" : "not-supported";
+        const icon = isSupported ? "✓" : "✕";
+        li.innerHTML = `<span>${featureName}</span><span class="status-icon">${icon}</span>`;
+        list.appendChild(li);
+    }
+</script>
+</body>
+</html>

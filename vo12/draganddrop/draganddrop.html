@@ -26,24 +26,24 @@
 
 <script>
     const dragImage = document.getElementById("dragImage");
-    const dropZones = document.getElementsByClassName("dropzone");
+    const dropZones = document.querySelectorAll(".dropzone");
 
-    dragImage.addEventListener("dragstart", function (event) {
-        event.dataTransfer.setData("text", event.target.id);
+    dragImage.addEventListener("dragstart", event => {
+        event.dataTransfer.setData("text", event.currentTarget.id);
     });
 
-    for (let i = 0; i < dropZones.length; i++) {
-        dropZones[i].addEventListener("dragover", function (event) {
+    dropZones.forEach(zone => {
+        zone.addEventListener("dragover", event => {
             event.preventDefault();
         });
 
-        dropZones[i].addEventListener("drop", function (event) {
+        zone.addEventListener("drop", event => {
             event.preventDefault();
             const data = event.dataTransfer.getData("text");
             const draggedElement = document.getElementById(data);
-            event.target.appendChild(draggedElement);
+            event.currentTarget.appendChild(draggedElement);
         });
-    }
+    });
 </script>
 </body>
 </html>

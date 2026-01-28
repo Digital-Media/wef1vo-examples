@@ -16,7 +16,7 @@
 <canvas width="640" height="480" id="draw">Ihr Browser unterstützt Canvas leider nicht!</canvas>
 
 <script>
-    // Wichtig: load und nicht DOMContentLoaded, sonst ist img nicht verfügbar (weil noch nicht geladen)
+    // Wichtig: load-Event-Listener, sonst ist img nicht verfügbar (weil noch nicht geladen)
     window.addEventListener("load", function () {
         const canvas = document.getElementById("draw");
         const ctx = canvas.getContext("2d");
