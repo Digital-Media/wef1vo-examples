@@ -1,10 +1,10 @@
-# WEF1VO Web Fundamentals Examples
+# WEF1VO/WEF1LE Web Fundamentals Examples
 
-These are the code examples accompanying the lecture notes for WEF1VO Web Fundamentals. Topics revolve around basic web development techniques such as HTML, CSS, and JavaScript.
+These are the code examples accompanying the lecture notes for WEF1VO/WEF1LE Web Fundamentals. Topics revolve around basic web development techniques such as HTML, CSS, and JavaScript.
 
 * Lecturer: [Wolfgang Hochleitner](https://github.com/hochleitner)
 
-Files in the ``main`` branch will change continuously throughout the summer semester. Once all lectures are completed, a tag will be created for the respective semester, and this state will be available for download as a [release](https://github.com/Digital-Media/wef1vo-examples/releases).
+Files in the ``main`` branch will change continuously throughout the winter semester. Once all lectures are completed, a tag will be created for the respective semester, and this state will be available for download as a [release](https://github.com/Digital-Media/wef1vo-examples/releases).
 
 ## Previous Names
 
