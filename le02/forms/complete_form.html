@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete HTML Document with a Form</title>
+</head>
+<body>
+<h1>Feedback</h1>
+<form action="mailto:john.doe@johndoe.com" method="post" enctype="text/plain">
+    <fieldset>
+        <legend>My data</legend>
+        <p>
+            <label for="author">Name:</label>
+            <input type="text" name="author" id="author" placeholder="John Doe" autocomplete="name" required>
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="user@example.com" autocomplete="email">
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Comment</legend>
+        <p>
+            <label for="comments">Comments:</label>
+            <textarea name="comments" id="comments" rows="8" placeholder="Great post!" required></textarea>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>I am...</legend>
+        <p>
+            <input type="radio" name="mood" value="happy" id="happy">
+            <label for="happy">happy</label>
+            <input type="radio" name="mood" value="neutral" id="neutral">
+            <label for="neutral">neutral</label>
+            <input type="radio" name="mood" value="sad" id="sad">
+            <label for="sad">sad</label>
+        </p>
+    </fieldset>
+    <button type="submit">Post comment</button>
+</form>
+</body>
+</html>

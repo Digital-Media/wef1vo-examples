@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customizable Select List</title>
+    <style>
+        select,
+        ::picker(select) {
+            appearance: base-select;
+        }
+    </style>
+</head>
+<body>
+<form action="mailto:john.doe@johndoe.com" method="post" enctype="text/plain">
+    <p>
+        <label for="customized">Course:</label>
+        <select name="course" id="customized">
+            <button><selectedcontent></selectedcontent></button>
+            <option value="WEF1" selected>Web Fundamentals <strong>WEF1</strong></option>
+            <option value="MCO1">Modern Code <strong>MCO1</strong></option>
+            <option value="GEC1">Game Engine Concepts <strong>GEC1</strong></option>
+        </select>
+    </p>
+    <button type="submit">Send</button>
+</form>
+</body>
+</html>
