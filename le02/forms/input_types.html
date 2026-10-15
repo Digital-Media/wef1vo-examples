@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Types</title>
+</head>
+<body>
+<form action="mailto:john.doe@johndoe.com" method="post" enctype="text/plain">
+    <p>
+        <label for="query">Search:</label>
+        <input type="search" name="query" id="query">
+    </p>
+    <p>
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" id="phone">
+    </p>
+    <p>
+        <label for="website">Website:</label>
+        <input type="url" name="website" id="website">
+    </p>
+    <p>
+        <label for="tickets">Tickets:</label>
+        <input type="number" name="tickets" id="tickets" min="1" max="10" step="1">
+    </p>
+    <p>
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date">
+    </p>
+    <p>
+        <label for="color">Favorite color:</label>
+        <input type="color" name="color" id="color">
+    </p>
+    <p>
+        <label for="photo">Photo:</label>
+        <input type="file" name="photo" id="photo">
+    </p>
+    <button type="submit">Send</button>
+</form>
+</body>
+</html>
