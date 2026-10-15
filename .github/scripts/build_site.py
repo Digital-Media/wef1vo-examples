@@ -93,7 +93,7 @@ def render(folder, root):
     <ul>
         {(chr(10) + "        ").join(items) if items else "<li>This folder is empty.</li>"}
     </ul>
-    <footer>Code examples for Web Fundamentals, Media Technology and Design, FH Upper Austria.</footer>
+    <footer>Code examples for Web Fundamentals, Media Technology and Design, University of Applied Sciences Upper Austria</footer>
 </main>
 </body>
 </html>"""
