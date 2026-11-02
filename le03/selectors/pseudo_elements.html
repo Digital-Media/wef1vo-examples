@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-Elements</title>
+    <style>
+        p::first-line {
+            color: fuchsia;
+        }
+
+        p::first-letter {
+            font-size: xx-large;
+        }
+
+        p::selection {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<p>This paragraph has so much text that it wraps in a narrow browser window, which creates more lines. When it
+    is selected, the selection is highlighted in yellow.</p>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Formatting: Colors and Backgrounds</title>
+    <style>
+        /* Fonts */
+        body {
+            font-family: system-ui, sans-serif;
+        }
+
+        h1, h2 {
+            font-family: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans", source-sans-pro, sans-serif;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        /* Text */
+        body {
+            line-height: 1.5;
+        }
+
+        h1, h2 {
+            line-height: 1.2;
+            text-wrap: balance;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-wrap: pretty;
+        }
+
+        main a {
+            color: #0B5CAD;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 0.2em;
+        }
+
+        /* Colors and backgrounds */
+        body {
+            color: #202020;
+            background-color: #FAFAF7;
+        }
+
+        header {
+            color: white;
+            background-image:
+                linear-gradient(rgb(0 0 0 / 0.6), rgb(0 0 0 / 0.2)),
+                url("mountains.webp");
+            background-size: cover;
+            background-position: center;
+            padding: 1rem 2rem 8rem; /* Spacing is covered in Lecture 4 */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <h1>A Weekend in the Mountains</h1>
+</header>
+<main>
+    <p>Two days, one hut and a lot of fresh air: a weekend in the mountains is the perfect break from lectures and
+        screens. You don't need much for it, but you should plan a few things in advance.</p>
+    <h2>What to Pack</h2>
+    <ul>
+        <li>Hiking boots that you have already worn in</li>
+        <li>A rain jacket, even if the sun is shining in the valley</li>
+        <li>Enough water and something to eat</li>
+    </ul>
+    <p>The weather in the mountains changes quickly. Before you leave, check the
+        <a href="https://www.geosphere.at/">weather forecast</a> and tell someone where you are going.</p>
+</main>
+</body>
+</html>
