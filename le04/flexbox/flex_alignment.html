@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox: aligning items</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+        }
+
+        .row {
+            display: flex;
+            gap: 0.5rem;
+            margin-block-end: 1rem;
+            background-color: rgb(236 233 230);
+        }
+
+        .row div {
+            padding: 0.5rem 1rem;
+            background-color: rgb(255 182 0);
+        }
+
+        .start {
+            justify-content: flex-start;
+        }
+
+        .end {
+            justify-content: flex-end;
+        }
+
+        .center {
+            justify-content: center;
+        }
+
+        .between {
+            justify-content: space-between;
+        }
+
+        .evenly {
+            justify-content: space-evenly;
+        }
+
+        /* Centered horizontally and vertically */
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 12rem;
+            background-color: rgb(250 94 94);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h2>justify-content: flex-start</h2>
+<div class="row start">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<h2>justify-content: flex-end</h2>
+<div class="row end">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<h2>justify-content: center</h2>
+<div class="row center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<h2>justify-content: space-between</h2>
+<div class="row between">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<h2>justify-content: space-evenly</h2>
+<div class="row evenly">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<h2>justify-content and align-items: center</h2>
+<div class="centered">
+    <p>Centered</p>
+</div>
+</body>
+</html>

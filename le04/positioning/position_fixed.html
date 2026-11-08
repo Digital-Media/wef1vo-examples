@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>position: sticky</title>
+    <meta charset="UTF-8">
+    <title>position: fixed</title>
     <style>
+        body {
+            font-family: system-ui, sans-serif;
+        }
+
         div {
             border: 1px solid black;
             width: 250px;
@@ -16,7 +20,7 @@
         }
 
         #two {
-            position: sticky;
+            position: fixed;
             left: 80px;
             top: 30px;
             background-color: green;
@@ -32,11 +36,11 @@
     </style>
 </head>
 <body>
-<div id="one">Erstes &lt;div&gt;-Element (static)</div>
-<div id="two">Zweites &lt;div&gt;-Element (sticky)</div>
-<div id="three">Drittes &lt;div&gt;-Element (static)</div>
-<div id="four">Viertes &lt;div&gt;-Element (static)</div>
-<div id="five">Fünftes &lt;div&gt;-Element (static)</div>
-<div id="six">Sechstes &lt;div&gt;-Element (static)</div>
+<div id="one">First &lt;div&gt; element (static)</div>
+<div id="two">Second &lt;div&gt; element (fixed)</div>
+<div id="three">Third &lt;div&gt; element (static)</div>
+<div id="four">Fourth &lt;div&gt; element (static)</div>
+<div id="five">Fifth &lt;div&gt; element (static)</div>
+<div id="six">Sixth &lt;div&gt; element (static)</div>
 </body>
 </html>

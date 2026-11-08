@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries: desktop first</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: rgb(236 233 230);
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+        }
+
+        #container {
+            width: calc(100% - 2rem);
+            max-width: 60rem;
+            margin-inline: auto;
+        }
+
+        header {
+            background-color: rgb(250 94 94);
+        }
+
+        #columns {
+            display: flex;
+        }
+
+        nav {
+            width: 25%;
+            background-color: rgb(255 132 0);
+        }
+
+        main {
+            flex: 1;
+            background-color: rgb(255 182 0);
+            color: rgb(67 67 67);
+        }
+
+        aside {
+            width: 20%;
+            background-color: rgb(228 42 135);
+        }
+
+        footer {
+            background-color: rgb(67 67 67);
+        }
+
+        header, nav, main, aside, footer {
+            padding: 0.5em;
+        }
+
+        /* Navigation above the content and the sidebar */
+        @media (width <= 48rem) {
+            #columns {
+                flex-wrap: wrap;
+            }
+
+            nav {
+                width: 100%;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+                gap: 1em;
+                padding: 0;
+                list-style-type: none;
+            }
+        }
+
+        /* Everything below each other */
+        @media (width <= 30rem) {
+            #columns {
+                flex-direction: column;
+            }
+
+            aside {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container">                <!-- Outer, centered container -->
+    <header>                        <!-- Header, e.g., for the heading -->
+        <h1>Heading</h1>
+    </header>
+    <div id="columns">              <!-- Flex container for the three columns -->
+        <nav>                       <!-- Left column, e.g., for the navigation -->
+            <ul>
+                <li>Navigation 1</li>
+                <li>Navigation 2</li>
+            </ul>
+        </nav>
+        <main>                      <!-- Middle column for the main content -->
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+                fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis
+                vitae, justo.</p>
+        </main>
+        <aside>                     <!-- Right column, e.g., for additional information -->
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+        </aside>
+    </div>
+    <footer>                        <!-- Footer, e.g., for the copyright -->
+        <p>&copy; 2026 The Author</p>
+    </footer>
+</div>
+</body>
+</html>

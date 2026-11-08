@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logical properties</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+        }
+
+        div {
+            width: 20rem;
+            margin-block: 1rem;
+            margin-inline-start: 3rem;
+            padding-block: 1rem;
+            padding-inline: 2rem;
+            border-inline-start: 0.5rem solid rgb(228 42 135);
+            background-color: rgb(255 182 0);
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div>
+        <p>Left to right: the margin and the colored border are on the left.</p>
+    </div>
+</section>
+<!-- The writing direction of the parent decides where start and end are -->
+<section dir="rtl">
+    <div>
+        <p>Right to left (e.g., Arabic or Hebrew): the same properties put the margin and the border on the right.</p>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A caption on top of an image with position and translate</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+        }
+
+        /* Reference point for the absolutely positioned caption */
+        figure {
+            position: relative;
+            width: 20rem;
+            margin: 0;
+        }
+
+        figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            padding: 0.5rem 1rem;
+            background-color: rgb(0 0 0 / 0.6);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<figure>
+    <img src="jane-doe.webp" alt="Photo of Jane Doe">
+    <figcaption>Jane Doe</figcaption>
+</figure>
+</body>
+</html>

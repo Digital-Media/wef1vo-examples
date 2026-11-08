@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Anordnung mit float</title>
+    <title>Flexbox: staff card</title>
     <style>
-        .staff-card {
-            width: 500px;
-            height: 200px;
-            padding: 10px;
-            border: 1px solid black;
+        body {
+            font-family: system-ui, sans-serif;
         }
 
-        .staff-photo {
-            height: 100%;
-            float: left;
-            margin-right: 10px;
+        .staff-card {
+            display: flex;
+            gap: 1rem;
+            max-width: 32rem;
+            height: 12.5rem;
+            padding: 1rem;
+            border: 1px solid black;
         }
 
         .staff-photo img {

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculating sizes with calc()</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Fills the visible height, minus the margin at the top and bottom */
+        header {
+            height: calc(100svh - 1rem * 2);
+            margin: 1rem;
+            padding: 1rem;
+            background-color: rgb(250 94 94);
+            color: white;
+        }
+
+        /* At most 60rem wide, 1rem space on each side on narrow screens */
+        .container {
+            width: calc(100% - 2rem);
+            max-width: 60rem;
+            margin-inline: auto;
+            margin-block: 2rem;
+            background-color: rgb(255 182 0);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Full-height header</h1>
+</header>
+<main class="container">
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+        natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+        pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+        nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+</main>
+</body>
+</html>

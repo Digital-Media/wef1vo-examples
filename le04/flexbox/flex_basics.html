@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox basics: display, gap, and flex-wrap</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        li {
+            padding: 0.5rem 1rem;
+            background-color: rgb(255 182 0);
+        }
+
+        .skills {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Wraps into a new line if there is not enough space */
+        .skills-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 2rem;
+        }
+    </style>
+</head>
+<body>
+<h2>display: flex and gap</h2>
+<ul class="skills">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+<h2>flex-wrap: wrap</h2>
+<ul class="skills-wrap">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>Accessibility</li>
+    <li>Responsive Design</li>
+    <li>Git</li>
+    <li>PhpStorm</li>
+    <li>Figma</li>
+    <li>Photography</li>
+    <li>Video Editing</li>
+</ul>
+</body>
+</html>

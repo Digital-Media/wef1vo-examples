@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dimensions: overflow</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+        }
+
+        main {
+            display: flex; /* place the boxes side by side */
+            gap: 10px;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        #one {
+            overflow: visible;
+            background-color: orange;
+        }
+
+        #two {
+            overflow: hidden;
+            background-color: green;
+        }
+
+        #three {
+            overflow: clip;
+            overflow-clip-margin: 15px;
+            background-color: lightblue;
+        }
+
+        #four {
+            overflow: scroll;
+            background-color: yellow;
+        }
+
+        #five {
+            overflow: auto;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div id="one">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</div>
+    <div id="two">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</div>
+    <div id="three">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</div>
+    <div id="four">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</div>
+    <div id="five">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</div>
+</main>
+</body>
+</html>
